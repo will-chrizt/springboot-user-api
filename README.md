@@ -20,4 +20,27 @@ A lightweight RESTful API built with Spring Boot, H2 Database, and Spring Data J
 - Maven
 
 ## 📁 Project Structure
+src/ ├── main/ │ ├── java/com/example/user/ │ │ ├── controller/ # REST controllers │ │ ├── model/ # JPA entities │ │ ├── repository/ # Spring Data JPA interfaces │ │ ├── service/ # Business logic │ │ └── UserApplication.java │ └── resources/ │ ├── application.properties │ └── data.sql # Optional: preload sample users
+
+Code
+
+## 🧪 API Endpoints
+
+| Method | Endpoint           | Description         |
+|--------|--------------------|---------------------|
+| GET    | `/api/users`       | Get all users       |
+| GET    | `/api/users/{id}`  | Get user by ID      |
+| POST   | `/api/users`       | Create new user     |
+| PUT    | `/api/users/{id}`  | Update user         |
+| DELETE | `/api/users/{id}`  | Delete user         |
+
+## 🛠️ Running Locally
+
+```bash
+./mvnw spring-boot:run
+Then visit:
+
+http://localhost:8080/api/users
+
+http://localhost:8080/h2-console (JDBC URL: jdbc:h2:mem:testdb)
 
