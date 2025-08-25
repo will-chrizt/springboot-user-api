@@ -7,6 +7,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+@CrossOrigin(origins = "http://3.82.251.139:5173") // Vite dev server
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+    // your endpoints
+}
 
 @RestController
 @RequestMapping("/api/users")
